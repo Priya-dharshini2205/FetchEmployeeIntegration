@@ -1,0 +1,44 @@
+<template>
+    <div
+      style="
+        margin-top: 2rem;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        padding: 1rem;
+      "
+    >
+      <lightning-layout>
+        
+        <lightning-layout-item size="8" padding="horizontal-medium">
+          <lightning-layout multiple-rows vertical-align="center">
+            <lightning-layout-item size="12">
+              <p class="slds-text-heading_medium">{employeeName}</p>
+            </lightning-layout-item>
+           
+              <lightning-layout-item size="12" class="slds-var-m-top_medium">
+                <span class="slds-var-p-right_medium" style="font-weight: bold"
+                  >Id : </span
+                >
+                <lightning-formatted-rich-text
+                  value={empId}
+                ></lightning-formatted-rich-text>
+              </lightning-layout-item>
+              <lightning-layout-item size="12" class="slds-var-m-top_medium">
+                <span class="slds-var-p-right_medium" style="font-weight: bold"
+                  >Salary : </span
+                ><lightning-formatted-number value={employeeSalary} format-style="currency" currency-code="INR" currency-display-as="code"></lightning-formatted-number>
+              </lightning-layout-item>
+              <lightning-layout-item size="12" class="slds-var-m-top_medium">
+                <span class="slds-var-p-right_medium" style="font-weight: bold"
+                  >Age : </span>
+                  <lightning-formatted-rich-text
+                  value={employeeAge}
+                ></lightning-formatted-rich-text>
+              </lightning-layout-item>
+
+           
+          </lightning-layout>
+        </lightning-layout-item>
+      </lightning-layout>
+    </div>
+  </template>

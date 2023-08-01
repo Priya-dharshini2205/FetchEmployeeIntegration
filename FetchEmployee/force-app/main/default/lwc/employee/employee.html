@@ -1,0 +1,54 @@
+<!-- <template>
+<lightning-layout>
+<lightning-layout-item size="12">
+    <lightning-button
+    label="Fetch Employee"
+    onclick={fetchEmployee}
+  ></lightning-button>
+</lightning-layout-item>
+array: {employees}
+  <template for:each={employees} for:item="emp">
+    <lightning-layout-item size="12" key={emp.id}>
+      <c-each-emp
+        emp-id={emp.id}
+        employee-name={emp.employee_name}
+        employee-salary={emp.employee_salary}
+        employee-age={emp.employee_age}
+      ></c-each-emp>
+    </lightning-layout-item>
+  </template>
+</lightning-layout>
+</template> -->
+<template>
+    <lightning-card title="Fetch Employees">
+      <div style="padding: 0 1rem">
+        <lightning-layout horizontal-align="space">
+         
+          <lightning-layout-item size="4" padding="horizontal-medium">
+            <lightning-layout horizontal-align="start">
+              <lightning-layout-item padding="horizontal-medium">
+                <lightning-button
+                label="Fetch Employee"
+                onclick={fetchEmployee}
+              ></lightning-button>
+              </lightning-layout-item>
+            </lightning-layout>
+          </lightning-layout-item>
+        </lightning-layout>
+  <br><br>
+  
+        <lightning-layout multiple-rows>
+            <template for:each={employees} for:item="emp">
+                <lightning-layout-item size="12" key={emp.id}>
+                  <c-each-emp
+                    emp-id={emp.id}
+                    employee-name={emp.employee_name}
+                    employee-salary={emp.employee_salary}
+                    employee-age={emp.employee_age}
+                  ></c-each-emp>
+                </lightning-layout-item>
+              </template>
+        </lightning-layout>
+      </div>
+    </lightning-card>
+  </template>
